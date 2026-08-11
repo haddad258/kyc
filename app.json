@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "VerifyMe KYC",
+    "slug": "verifyme-kyc",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#060E1A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.verifyme.kyc",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VerifyMe needs camera access to capture your ID and selfie for identity verification.",
+        "NSPhotoLibraryUsageDescription": "VerifyMe needs photo library access to upload your ID document.",
+        "NSPhotoLibraryAddUsageDescription": "VerifyMe needs permission to save photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#060E1A"
+      },
+      "package": "com.verifyme.kyc",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow VerifyMe to access your photos to upload your ID document.",
+          "cameraPermission": "Allow VerifyMe to use your camera for identity verification."
+        }
+      ],
+      "expo-secure-store"
+    ]
+  }
+}
